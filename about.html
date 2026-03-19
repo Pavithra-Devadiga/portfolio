@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About | Pavithra</title>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+
+/* SAME COLORS AS HOME PAGE */
+:root {
+--bg-cream:#f6f1eb;
+--deep-maroon:#4a2c2a;
+--soft-glow:#ede4da;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:linear-gradient(120deg,#f6f1eb,#e6d4b4);
+color:#333;
+}
+
+/* HEADER (same spacing as home) */
+header{
+padding:25px 8%;
+}
+
+.nav-links a:hover{
+color:#7f433f;
+}
+
+/* CONTACT BUTTON */
+.contact-btn{
+padding:14px 35px;
+font-size:18px;
+border:none;
+border-radius:50px;
+background:#4a2c2a;
+color:white;
+cursor:pointer;
+transition:transform .25s ease;
+text-decoration:none;
+}
+
+.contact-btn:hover{
+transform:scale(1.12);
+}
+
+/* ABOUT SECTION */
+.about-section{
+display:flex;
+align-items:center;
+justify-content:center;
+padding:40px 10%;
+min-height:80vh;
+gap:60px;
+}
+
+/* IMAGE */
+.image-container{
+flex:1;
+display:flex;
+justify-content:center;
+}
+
+.circle-glow{
+width:380px;
+height:380px;
+background-color:var(--soft-glow);
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+box-shadow:0 10px 30px rgba(0,0,0,0.03);
+overflow:hidden;
+}
+
+.circle-glow img{
+width:100%;
+height:100%;
+object-fit:cover;
+border-radius:50%;
+}
+
+.circle-glow img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+/* TEXT */
+.content-container{
+flex:1.2;
+}
+
+.content-container h1{
+font-family:'Georgia',serif;
+font-size:3.5rem;
+margin-bottom:25px;
+line-height:1.1;
+}
+
+.content-container p{
+font-size:1.1rem;
+line-height:1.8;
+margin-bottom:20px;
+max-width:550px;
+}
+
+/* TITLE HIGHLIGHT */
+.highlight{
+color:var(--deep-maroon);
+font-weight:bold;
+border-bottom:2px solid var(--deep-maroon);
+}
+
+/* MOBILE */
+@media (max-width:900px){
+
+.about-section{
+flex-direction:column;
+text-align:center;
+}
+
+.circle-glow{
+width:300px;
+height:300px;
+}
+
+.content-container h1{
+font-size:2.5rem;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<nav class="navbar">
+  <div class="logo">Pavithra</div>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="projects.html">Projects</a></li>
+  </ul>
+
+  <div class="menu-toggle" id="menuToggle">
+    ☰
+  </div>
+</nav>
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+
+const toggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+toggle.addEventListener("click", function(){
+navLinks.classList.toggle("active");
+});
+
+});
+</script>
+</header>
+
+
+<section class="about-section">
+
+<div class="image-container">
+<div class="circle-glow">
+<img src="pa.jpeg" alt="Pavithra Profile" >
+</div>
+</div>
+
+<div class="content-container">
+
+<h1><span class="highlight">Get to Know Me</span></h1>
+
+<p>
+I am an aspiring programmer and web developer with a passion for building clean, responsive, and user-friendly digital experiences. I enjoy transforming ideas into functional websites and continuously improving my skills in web technologies and problem solving.
+</p>
+
+<p>
+Beyond coding, I enjoy activities that spark creativity and perspective. I like photography, especially capturing moments with a retro aesthetic, and I appreciate exploring the richness of the Kannada language and culture. These interests inspire my creativity and influence the way I approach building thoughtful and visually appealing digital experiences.
+</p>
+
+</div>
+
+</section>
+
+</body>
+<footer>
+
+<div class="footer-container">
+
+<!-- Wave Animation -->
+<div class="waves-wrapper">
+<svg class="waves" xmlns="http://www.w3.org/2000/svg"
+viewBox="0 24 150 28" preserveAspectRatio="none">
+<defs>
+<path id="gentle-wave"
+d="M-160 44c30 0 58-18 88-18s58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"/>
+</defs>
+
+<g class="parallax">
+<use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(74,44,42,0.7)"/>
+<use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(74,44,42,0.5)"/>
+<use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(74,44,42,0.3)"/>
+<use xlink:href="#gentle-wave" x="48" y="7" fill="#4a2c2a"/>
+</g>
+
+</svg>
+</div>
+
+
+<section class="connect-minimal">
+
+<div class="connect-header">
+<span>LET'S CONNECT</span>
+<h3>Contact</h3>
+</div>
+
+
+<div class="social-serial-list">
+
+<a href="https://www.linkedin.com/in/pavithra-devadiga-a01368340"
+class="serial-item">
+<i class="fab fa-linkedin-in"></i>
+<span>LinkedIn</span>
+</a>
+
+<a href="https://github.com/Pavithra-Devadiga"
+class="serial-item">
+<i class="fab fa-github"></i>
+<span>GitHub</span>
+</a>
+
+<a href="mailto:pavithraise28@gmail.com"
+class="serial-item">
+<i class="fas fa-envelope"></i>
+<span>Email</span>
+</a>
+
+</div>
+
+<a class="mini-footer">
+<p>© 2026 Pavithra | Built with 💻 and 💜</p>
+</a>
+
+</section>
+
+</div>
+
+</footer>
+
+<style>
+  .footer-container{
+width:100%;
+overflow:hidden;
+}
+
+/* Wave */
+.waves-wrapper{
+width:100%;
+height:90px;
+line-height:0;
+}
+
+.waves{
+width:100%;
+height:100%;
+display:block;
+}
+
+/* Wave Animation */
+.parallax > use{
+animation:move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
+}
+
+.parallax > use:nth-child(1){
+animation-delay:-2s;
+animation-duration:7s;
+}
+
+.parallax > use:nth-child(2){
+animation-delay:-3s;
+animation-duration:10s;
+}
+
+.parallax > use:nth-child(3){
+animation-delay:-4s;
+animation-duration:13s;
+}
+
+.parallax > use:nth-child(4){
+animation-delay:-5s;
+animation-duration:20s;
+}
+
+@keyframes move-forever{
+0%{transform:translate3d(-90px,0,0);}
+100%{transform:translate3d(85px,0,0);}
+}
+
+
+/* Footer Content */
+
+.connect-minimal{
+background:#4a2c2a;
+padding:60px 20px;
+text-align:center;
+}
+
+.connect-header span{
+font-size:12px;
+letter-spacing:2px;
+color:#d8c0b9;
+font-weight:600;
+}
+
+.connect-header h3{
+font-size:32px;
+color:white;
+margin:10px 0 30px;
+}
+
+/* Social Buttons */
+
+.social-serial-list{
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.serial-item{
+display:flex;
+align-items:center;
+gap:10px;
+padding:10px 22px;
+border:1.5px solid white;
+border-radius:50px;
+text-decoration:none;
+color:white;
+font-weight:600;
+transition:0.3s;
+}
+
+.serial-item i{
+font-size:16px;
+}
+
+.serial-item:hover{
+background:white;
+color:#4a2c2a;
+transform:translateY(-3px);
+}
+
+/* Copyright */
+
+.mini-footer{
+margin-top:40px;
+padding: 100px;
+padding-top:100px;
+color:white;
+font-size:14px;
+}
+
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.social-serial-list{
+flex-direction:column;
+align-items:center;
+}
+
+.serial-item{
+width:180px;
+justify-content:center;
+}
+
+}
+</style>
+</html>

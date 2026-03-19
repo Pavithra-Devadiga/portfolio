@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Skills</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+<!-- Stylesheet -->
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f6f1eb; /* soft background matching website */
+    color:#333;
+}
+
+/* HEADER / NAVBAR */
+header{
+    padding:25px 8%;
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:32px;
+    font-weight:700;
+    color:#4a2c2a;
+}
+
+.nav-links{
+    display:flex;
+    gap:40px;
+    list-style:none;
+}
+
+.nav-links a{
+    font-size:18px;
+    font-weight:500;
+    color:#333;
+    transition:.3s;
+    text-decoration:none;
+}
+
+.nav-links a:hover,
+.nav-links a.active{
+    color:#7f433f;
+}
+
+
+/* Skills Section */
+.skills-section{
+    padding:60px 8%;
+    text-align:center;
+}
+
+.section-title{
+    font-size:36px;
+    color:#4a2c2a;
+    margin-bottom:50px;
+}
+
+/* Skills container */
+.skills-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+    gap:50px; /* increased space between boxes */
+    max-width:1200px;
+    margin:auto;
+}
+
+/* Skill box */
+.skill-box{
+    display:flex;
+    align-items:center;
+    background:#e6d4b4; /* skill box color matching website theme */
+    padding:20px;
+    border-radius:12px;
+    opacity:0;
+    transform:translateX(-50px); /* slide-in start */
+    transition:all 0.7s ease;
+}
+
+.skill-box.visible{
+    opacity:1;
+    transform:translateX(0); /* slide-in finish */
+}
+
+/* Skill icon */
+.skill-icon{
+    font-size:50px;
+    color:#4a2c2a;
+    margin-right:20px;
+    min-width:60px;
+    text-align:center;
+}
+
+.skill-icon i{
+    font-size:50px;
+    color:#4a2c2a;   /* same theme color */
+}
+
+/* Skill content */
+.skill-content h3{
+    margin:0 0 8px 0;
+    font-size:20px;
+    color:#333;
+}
+
+.skill-content p{
+    margin:0;
+    font-size:14px;
+    color:#333;
+}
+
+/* Soft Skills Section */
+.soft-skills-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+    margin-top:40px;
+}
+
+.soft-skill{
+    background:#4a2c2a;
+    color:white;
+    padding:10px 18px;
+    border-radius:25px;
+    font-size:14px;
+    transition:transform 0.3s, box-shadow 0.3s;
+}
+
+.soft-skill:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 15px #4a2c2a;
+}
+
+/* Hide hamburger on desktop */
+.menu-toggle{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* Mobile Navbar */
+@media(max-width:768px){
+
+    .menu-toggle{
+        display:block;
+    }
+
+    .nav-links{
+        position:absolute;
+        top:80px;
+        right:8%;
+        background:#f6f1eb;
+        flex-direction:column;
+        gap:20px;
+        width:200px;
+        padding:20px;
+        border-radius:12px;
+        box-shadow:0 10px 25px rgba(0,0,0,0.1);
+
+        display:none;
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+}
+
+/* Responsive adjustments */
+@media(max-width:768px){
+    .skill-box{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+    .skill-icon{
+        margin-bottom:10px;
+    }
+    .nav-links{
+        flex-direction:column;
+        gap:20px;
+        align-items:center;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<header>
+
+<nav class="navbar">
+  <div class="logo">Pavithra</div>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="projects.html">Projects</a></li>
+  </ul>
+
+  <div class="menu-toggle" id="menuToggle">
+    ☰
+  </div>
+</nav>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const toggle = document.getElementById("menuToggle");
+  const navLinks = document.getElementById("navLinks");
+
+  toggle.addEventListener("click", function () {
+      navLinks.classList.toggle("active");
+  });
+
+});
+</script>
+
+</header>
+
+<!-- Skills Section -->
+<section class="skills-section">
+    <h1 class="section-title">Technical Skills</h1>
+
+    <div class="skills-container">
+
+        <!-- Skill Box -->
+        <div class="skill-box">
+            <div class="skill-icon"><i class="fab fa-java"></i></div>
+            <div class="skill-content">
+                <h3>Java</h3>
+                <p>Object-oriented programming, backend development, and strong problem-solving skills using Java.</p>
+            </div>
+        </div>
+
+       <div class="skill-box">
+    <div class="skill-icon"><i class="devicon-c-plain"></i></div>
+    <div class="skill-content">
+        <h3>C</h3>
+        <p>Fundamentals of programming, data structures, and algorithm implementation in C.</p>
+    </div>
+</div>
+
+<div class="skill-box">
+    <div class="skill-icon"><i class="devicon-cplusplus-plain"></i></div>
+    <div class="skill-content">
+        <h3>C++</h3>
+        <p>Advanced programming concepts, OOP, and efficient algorithm design in C++.</p>
+    </div>
+</div>
+
+        <div class="skill-box">
+            <div class="skill-icon"><i class="fab fa-html5"></i></div>
+            <div class="skill-content">
+                <h3>HTML</h3>
+                <p>Markup language for building structured web pages and semantic content design.</p>
+            </div>
+        </div>
+
+        <div class="skill-box">
+            <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
+            <div class="skill-content">
+                <h3>CSS</h3>
+                <p>Styling web pages with layouts, animations, and responsive design using CSS.</p>
+            </div>
+        </div>
+
+        <div class="skill-box">
+            <div class="skill-icon"><i class="fab fa-js-square"></i></div>
+            <div class="skill-content">
+                <h3>JavaScript</h3>
+                <p>Client-side scripting, DOM manipulation, and interactive web functionality using JS.</p>
+            </div>
+        </div>
+
+        <div class="skill-box">
+            <div class="skill-icon"><i class="fas fa-database"></i></div>
+            <div class="skill-content">
+                <h3>PostgreSQL</h3>
+                <p>Database management, writing efficient queries, and data modeling with PostgreSQL.</p>
+            </div>
+        </div>
+
+        <div class="skill-box">
+            <div class="skill-icon"><i class="fas fa-cogs"></i></div>
+            <div class="skill-content">
+                <h3>Maven</h3>
+                <p>Project management and build automation using Maven for Java applications.</p>
+            </div>
+        </div>
+
+        <div class="skill-box">
+            <div class="skill-icon"><i class="fas fa-book"></i></div>
+            <div class="skill-content">
+                <h3>Hibernate</h3>
+                <p>Learning ORM framework to map Java objects to relational database tables efficiently.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Soft Skills -->
+    <h2 class="section-title" style="margin-top:60px;">Soft Skills</h2>
+    <div class="soft-skills-container">
+        <div class="soft-skill">Problem Solving</div>
+        <div class="soft-skill">Teamwork</div>
+        <div class="soft-skill">Communication</div>
+        <div class="soft-skill">Adaptability</div>
+        <div class="soft-skill">Creativity</div>
+    </div>
+
+</section>
+
+<!-- JS: Slide-in animation -->
+<script>
+const skillBoxes = document.querySelectorAll('.skill-box');
+
+function showSkills() {
+    skillBoxes.forEach((box, index) => {
+        const boxTop = box.getBoundingClientRect().top;
+        const triggerPoint = window.innerHeight - 100;
+        if(boxTop < triggerPoint){
+            setTimeout(()=>{box.classList.add('visible');}, index*150);
+        }
+    });
+}
+
+window.addEventListener('scroll', showSkills);
+window.addEventListener('load', showSkills);
+</script>
+
+
+</body>
+<footer>
+
+<div class="footer-container">
+
+<!-- Wave Animation -->
+<div class="waves-wrapper">
+<svg class="waves" xmlns="http://www.w3.org/2000/svg"
+viewBox="0 24 150 28" preserveAspectRatio="none">
+<defs>
+<path id="gentle-wave"
+d="M-160 44c30 0 58-18 88-18s58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"/>
+</defs>
+
+<g class="parallax">
+<use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(74,44,42,0.7)"/>
+<use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(74,44,42,0.5)"/>
+<use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(74,44,42,0.3)"/>
+<use xlink:href="#gentle-wave" x="48" y="7" fill="#4a2c2a"/>
+</g>
+
+</svg>
+</div>
+
+
+<section class="connect-minimal">
+
+<div class="connect-header">
+<span>LET'S CONNECT</span>
+<h3>Contact</h3>
+</div>
+
+
+<div class="social-serial-list">
+
+<a href="https://www.linkedin.com/in/pavithra-devadiga-a01368340"
+class="serial-item">
+<i class="fab fa-linkedin-in"></i>
+<span>LinkedIn</span>
+</a>
+
+<a href="https://github.com/Pavithra-Devadiga"
+class="serial-item">
+<i class="fab fa-github"></i>
+<span>GitHub</span>
+</a>
+
+<a href="mailto:pavithraise28@gmail.com"
+class="serial-item">
+<i class="fas fa-envelope"></i>
+<span>Email</span>
+</a>
+
+</div>
+
+<a class="mini-footer">
+<p>© 2026 Pavithra | Built with 💻 and 💜</p>
+</a>
+
+</section>
+
+</div>
+
+</footer>
+
+<style>
+  .footer-container{
+width:100%;
+overflow:hidden;
+}
+
+/* Wave */
+.waves-wrapper{
+width:100%;
+height:90px;
+line-height:0;
+}
+
+.waves{
+width:100%;
+height:100%;
+display:block;
+}
+
+/* Wave Animation */
+.parallax > use{
+animation:move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
+}
+
+.parallax > use:nth-child(1){
+animation-delay:-2s;
+animation-duration:7s;
+}
+
+.parallax > use:nth-child(2){
+animation-delay:-3s;
+animation-duration:10s;
+}
+
+.parallax > use:nth-child(3){
+animation-delay:-4s;
+animation-duration:13s;
+}
+
+.parallax > use:nth-child(4){
+animation-delay:-5s;
+animation-duration:20s;
+}
+
+@keyframes move-forever{
+0%{transform:translate3d(-90px,0,0);}
+100%{transform:translate3d(85px,0,0);}
+}
+
+
+/* Footer Content */
+
+.connect-minimal{
+background:#4a2c2a;
+padding:60px 20px;
+text-align:center;
+}
+
+.connect-header span{
+font-size:12px;
+letter-spacing:2px;
+color:#d8c0b9;
+font-weight:600;
+}
+
+.connect-header h3{
+font-size:32px;
+color:white;
+margin:10px 0 30px;
+}
+
+/* Social Buttons */
+
+.social-serial-list{
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.serial-item{
+display:flex;
+align-items:center;
+gap:10px;
+padding:10px 22px;
+border:1.5px solid white;
+border-radius:50px;
+text-decoration:none;
+color:white;
+font-weight:600;
+transition:0.3s;
+}
+
+.serial-item i{
+font-size:16px;
+}
+
+.serial-item:hover{
+background:white;
+color:#4a2c2a;
+transform:translateY(-3px);
+}
+
+/* Copyright */
+
+.mini-footer{
+margin-top:40px;
+padding: 100px;
+padding-top:100px;
+color:white;
+font-size:14px;
+}
+
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.social-serial-list{
+flex-direction:column;
+align-items:center;
+}
+
+.serial-item{
+width:180px;
+justify-content:center;
+}
+
+}
+</style>
+<script src="script.js"></script>
+</html>

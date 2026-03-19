@@ -1,0 +1,373 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:linear-gradient(120deg,#f6f1eb,#e6d4b4);
+color:#333;
+}
+
+
+/* NAVBAR */
+
+header{
+padding:25px 8%;
+}
+
+
+.nav-links a:hover{
+color:#7f433f;
+}
+
+.cv-btn{
+padding:14px 35px;
+font-size:18px;
+border:none;
+border-radius:12px;
+background:#4a2c2a;
+color:white;
+cursor:pointer;
+transition: transform 0.25s ease;
+text-decoration: none;
+}
+
+.cv-btn:hover{
+transform: scale(1.12);
+text-decoration:none;
+}
+
+/* Bulge effect on hover */
+
+
+
+/* HERO SECTION */
+
+.hero{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:80px 8%;
+flex-wrap:wrap;
+}
+
+.hero-img{
+width:420px;
+height:420px;
+border-radius:50%;
+overflow:hidden;
+border:10px solid #946d6a;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+justify-content:flex-end;
+}
+
+.hero-img img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.hero-text{
+max-width:600px;
+}
+
+.hero-text h1{
+font-size:56px;
+margin-bottom:15px;
+}
+
+.hero-text h2{
+font-size:32px;
+margin-bottom:20px;
+}
+
+.hero-text span{
+color:#4a2c2a;
+}
+
+.hero-text p{
+font-size:18px;
+line-height:1.8;
+margin-bottom:30px;
+}
+
+
+
+/* SOCIAL ICONS */
+
+.social-icons{
+display:flex;
+gap:25px;
+margin-bottom:30px;
+}
+
+.social-icons a{
+font-size:30px;
+color:#444;
+transition:0.3s;
+}
+
+.social-icons a:hover{
+transform:scale(1.2);
+color:#4a2c2a;
+}
+
+
+
+/* MOBILE RESPONSIVE */
+
+@media(max-width:900px){
+
+.hero{
+flex-direction:column;
+text-align:center;
+}
+
+.hero-img{
+width:300px;
+height:300px;
+margin-bottom:40px;
+}
+
+.nav-links{
+display:none;
+}
+
+.hero-text h1{
+font-size:42px;
+}
+
+.hero-text h2{
+font-size:26px;
+}
+
+}
+
+/* /skill-page */
+
+/* Skills Page */
+.skills-section {
+    padding: 60px 20px;
+    background: #111;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 36px;
+    color: cyan;
+    margin-bottom: 50px;
+}
+
+/* Container for all skill boxes */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Each skill box */
+.skill-box {
+    display: flex;
+    align-items: center;
+    background: #1a1a1a;
+    border-left: 4px solid cyan;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px cyan;
+}
+
+/* Icon in box */
+.skill-icon {
+    font-size: 50px;
+    color: cyan;
+    margin-right: 20px;
+    min-width: 60px;
+    text-align: center;
+}
+
+/* Skill content */
+.skill-content h3 {
+    margin: 0 0 8px 0;
+    font-size: 20px;
+    color: #fff;
+}
+
+.skill-content p {
+    margin: 0;
+    font-size: 14px;
+    color: #ccc;
+}
+
+/* NAVBAR */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:white;
+position:relative;
+}
+
+.logo{
+font-size:26px;
+font-weight:600;
+color:#4a2c2a;
+}
+
+.nav-links{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+.nav-links a{
+text-decoration:none;
+font-weight:500;
+color:#4a2c2a;
+transition:0.3s;
+}
+
+.nav-links a:hover{
+color:#7d5a57;
+}
+
+.contact-btn{
+padding:8px 18px;
+border-radius:25px;
+background:#4a2c2a;
+color:white;
+text-decoration:none;
+font-weight:500;
+}
+
+.menu-toggle{
+display:none;
+font-size:22px;
+cursor:pointer;
+color:#4a2c2a;
+}
+
+/* Responsive for mobile */
+@media(max-width:768px){
+    .skill-box {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .skill-icon {
+        margin-bottom: 10px;
+    }
+}
+
+/* GLOBAL RESPONSIVE */
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+img{
+max-width:100%;
+height:auto;
+}
+
+.hero{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:60px;
+padding:80px 8%;
+flex-wrap:wrap;
+}
+
+.hero-text{
+max-width:500px;
+}
+
+@media (max-width:768px){
+
+.hero{
+flex-direction:column;
+text-align:center;
+}
+
+.photo-wrapper{
+width:280px;
+height:280px;
+}
+
+.blob-shape{
+width:250px;
+height:250px;
+}
+
+}
+
+/* Base Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background:#f6f1eb; /* keep your dark theme */
+  color: white;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Desktop Menu */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Hide toggle in desktop */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: #f6f1eb;
+    flex-direction: column;
+    width: 200px;
+    padding: 20px;
+    border-radius: 10px;
+
+    display: none; /* hidden by default */
+  }
+
+  .nav-links.active {
+    display: flex; /* show when clicked */
+  }
+}
+
+
