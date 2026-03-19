@@ -370,4 +370,19 @@ height:250px;
   }
 }
 
+.nav-links a{
+    font-size:18px;
+    font-weight:500;
+    color:#333;
+    transition:.3s;
+    text-decoration:none;
+}
 
+.nav-links a:hover,
+.nav-links a.active{
+    color:#7f433f !important;
+}
+
+.nav-links a{
+color: black !important;
+}
