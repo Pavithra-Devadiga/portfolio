@@ -3,7 +3,7 @@
 This is my **personal portfolio website** built to showcase my skills, projects, and interests in web development and programming.
 
 🔗 **Live Website**  
-https://pavithra-devadiga.github.io/portfolio/
+ https://pavithra-devadiga.github.io/portfolio/
 
 ---
 
